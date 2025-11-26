@@ -17,7 +17,8 @@ const FloatingElements = () => {
   useEffect(() => {
     const generateElements = () => {
       const newElements = [];
-      const emojis = ['🌸', '🌺', '🌷', '💖', '✨', '🌟'];
+      // Các icon liên quan tới 7 viên ngọc rồng / Dragon Ball vibe
+      const emojis = ['🟠', '⭐', '🐉', '💥', '⚡️'];
       
       for (let i = 0; i < 20; i++) {
         newElements.push({
@@ -59,21 +60,25 @@ const FloatingElements = () => {
 const BeautifulBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Base gradient - Soft and elegant */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50"></div>
+      {/* Base gradient - Dragon Ball / Ngọc Rồng themed */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-500 via-amber-400 to-sky-500"></div>
       
-      {/* Soft gradient layers */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent via-pink-100/30 to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-transparent via-purple-100/20 to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-rose-100/25 to-transparent"></div>
+      {/* Soft gradient aura giống khí năng lượng */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/40 via-transparent to-transparent mix-blend-soft-light"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-sky-900/60 via-transparent to-transparent mix-blend-soft-light"></div>
       
-      {/* Subtle pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: `
-          radial-gradient(circle at 25% 25%, rgba(236,72,153,0.1) 0%, transparent 50%),
-          radial-gradient(circle at 75% 75%, rgba(168,85,247,0.1) 0%, transparent 50%)
-        `,
-      }}></div>
+      {/* Subtle pattern giống các viên ngọc rồng */}
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 10% 20%, rgba(251,191,36,0.25) 0%, transparent 55%),
+            radial-gradient(circle at 80% 15%, rgba(252,211,77,0.3) 0%, transparent 55%),
+            radial-gradient(circle at 20% 80%, rgba(249,115,22,0.35) 0%, transparent 55%),
+            radial-gradient(circle at 85% 75%, rgba(56,189,248,0.25) 0%, transparent 55%)
+          `,
+        }}
+      ></div>
     </div>
   );
 };
@@ -82,16 +87,16 @@ const BeautifulBackground = () => {
 const SoftGlow = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-200/15 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-rose-200/10 rounded-full blur-3xl"></div>
+      {/* Vầng sáng như khí Ki xung quanh */}
+      <div className="absolute -top-10 left-1/4 w-80 h-80 bg-amber-300/40 rounded-full blur-3xl mix-blend-screen"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/40 rounded-full blur-3xl mix-blend-screen"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-sky-300/35 rounded-full blur-3xl mix-blend-screen"></div>
     </div>
   );
 };
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -104,57 +109,91 @@ export default function Home() {
       <FloatingElements />
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 py-12">
-        {/* Hero Section */}
-        <div className={`text-center mb-20 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          
-          {/* Chinese Text Section */}
-          <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ animationDelay: '0.5s' }}>
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 md:p-12 border border-pink-200/50 shadow-xl shadow-pink-500/10">
-              <div className="space-y-6 text-center">
-                <p className="text-xl md:text-2xl text-gray-700 font-light leading-relaxed">
-                  月落金杯映玉光，
-                </p>
-                <p className="text-xl md:text-2xl text-gray-700 font-light leading-relaxed">
-                  一朵花笑散烟霜。
-                </p>
-                <p className="text-xl md:text-2xl text-pink-600 font-light leading-relaxed">
-                  十月二十香满路，
-                </p>
-                <p className="text-xl md:text-2xl text-purple-600 font-light leading-relaxed">
-                  愿君留艳在人间。
-                </p>
-              </div>
-            </div>
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        {/* Hero */}
+        <section
+          className={`w-full max-w-5xl mx-auto text-center mb-16 transition-all duration-1000 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/70 border border-pink-200/60 shadow-sm shadow-pink-500/10 mb-6">
+            <span className="text-xs text-gray-500">Nick tự động • Giao dịch 24/7</span>
           </div>
 
-          {/* Image and QR Section */}
-          <div className={`max-w-2xl mx-auto mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ animationDelay: '0.8s' }}>
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-pink-200/50 shadow-xl shadow-pink-500/10">
-              <div className="text-center space-y-6">
-                <img 
-                  src="/140baa847f48f216ab59.jpg" 
-                  alt="Women's Day" 
-                  className="w-full max-w-md mx-auto rounded-xl shadow-lg"
-                />
-                <div className="space-y-4">
-                  <p className="text-lg text-gray-600 font-medium">
-                    Chỉ Trâm, Như và Trúc <br />
-                    Khánh vui lòng không quét QR
-                  </p>
-                  <a 
-                    href="https://lixi.momo.vn/lixi/EpLBlyPZ6E7VY1y"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full font-medium hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  >
-                    Nhận lì xì 🧧
-                  </a>
-                </div>
-              </div>
-            </div>
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
+          SHOP BÁN NICK NGỌC RỒNG ONLINE UY TÍN
+          </h1>
+
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+            Kho nick Ngọc Rồng Online đa dạng, đầy đủ hành tinh, mọi mức giá. Tài khoản rõ nguồn gốc,
+            bảo mật, hỗ trợ sau bán hàng tận tâm để bạn yên tâm cày cuốc, săn boss, PK cực đã.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://nickdaoquan.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold text-sm md:text-base shadow-lg shadow-pink-500/40 hover:from-pink-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300"
+            >
+            BẤM VÀO ĐÂY ĐỂ LỰA NICK NGAY
+            </a>
           </div>
-        </div>
+        </section>
+
+        {/* Features / Lý do chọn */}
+        <section
+          className={`w-full max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-12 transition-all duration-1000 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{ animationDelay: '0.3s' }}
+        >
+          <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-5 border border-pink-100 shadow-md shadow-pink-500/10 text-left">
+            <h3 className="font-semibold text-gray-900 mb-2">Uy tín & minh bạch</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Thông tin nick, hành tinh, đồ đạc, sức mạnh, hình ảnh được mô tả rõ ràng. Cam kết đúng
+              như mô tả, sai hoàn tiền.
+            </p>
+          </div>
+          <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-5 border border-pink-100 shadow-md shadow-pink-500/10 text-left">
+            <h3 className="font-semibold text-gray-900 mb-2">Tự động giao dịch 24/7</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Thanh toán xong nhận nick ngay tại web, không cần chờ đợi. Hệ thống hoạt động liên tục
+              kể cả đêm khuya.
+            </p>
+          </div>
+          <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-5 border border-pink-100 shadow-md shadow-pink-500/10 text-left">
+            <h3 className="font-semibold text-gray-900 mb-2">Hỗ trợ tận tâm</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Có admin hỗ trợ khi cần đổi thông tin, khôi phục, giải đáp thắc mắc. Ưu tiên quyền lợi
+              khách hàng lâu dài.
+            </p>
+          </div>
+        </section>
+
+        {/* Note / Cam kết */}
+        <section
+          className={`w-full max-w-3xl mx-auto transition-all duration-1000 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{ animationDelay: '0.6s' }}
+        >
+          <div className="bg-white/85 backdrop-blur-xl rounded-2xl p-6 md:p-8 border border-pink-200/60 shadow-xl shadow-pink-500/10 text-left">
+            <h2 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
+              Cam kết từ shop nick Ngọc Rồng
+            </h2>
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
+              Chúng tôi luôn đặt sự uy tín và trải nghiệm của anh em game thủ lên hàng đầu. Mọi giao
+              dịch đều được lưu lại lịch sử, bảo mật thông tin và không can thiệp vào tài khoản sau khi
+              đã bàn giao.
+            </p>
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+              Nếu bạn đang tìm nơi mua nick Ngọc Rồng Online an toàn, giá hợp lý để chơi lâu dài, hãy
+              truy cập ngay <a href="https://nickdaoquan.vn" target="_blank" rel="noopener noreferrer" className="font-semibold text-pink-500">nickdaoquan.vn</a> để chọn
+              cho mình một tài khoản ưng ý nhé!
+            </p>
+          </div>
+        </section>
       </div>
 
       <style jsx>{`
