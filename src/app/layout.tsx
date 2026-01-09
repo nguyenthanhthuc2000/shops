@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SHOP BÁN NICK NGỌC RỒNG ONLINE UY TÍN | TOANSV5ALL.COM",
+  title: "SHOP BÁN NICK NGỌC RỒNG ONLINE UY TÍN",
   keywords: "shop bán nick ngọc rồng online uy tín, nick Ngọc Rồng Online, nick Ngọc Rồng, nick Ngọc Rồng giá rẻ, nick Ngọc Rồng giá tốt, nick Ngọc Rồng giá rẻ, nick Ngọc Rồng giá tốt",
   description: "Kho nick Ngọc Rồng Online đa dạng, đầy đủ hành tinh, mọi mức giá. Tài khoản rõ nguồn gốc, bảo mật, hỗ trợ sau bán hàng tận tâm để bạn yên tâm cày cuốc, săn boss, PK cực đã.",
 };

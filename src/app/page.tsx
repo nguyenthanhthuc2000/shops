@@ -124,10 +124,13 @@ export default function Home() {
           SHOP BÁN NICK NGỌC RỒNG ONLINE UY TÍN
           </h1>
 
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            Kho nick Ngọc Rồng Online đa dạng, đầy đủ hành tinh, mọi mức giá. Tài khoản rõ nguồn gốc,
-            bảo mật, hỗ trợ sau bán hàng tận tâm để bạn yên tâm cày cuốc, săn boss, PK cực đã.
+          
+          <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-5 border border-pink-100 shadow-md shadow-pink-500/10 text-left mb-8">
+          <h3 className="font-semibold text-gray-900 mb-2">Thông báo</h3>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-bold">
+            NICKDAOQUAN.VN đã đổi tên thành <span className="text-pink-500">NICKDAOQUAN.COM</span> để phục vụ khách hàng tốt hơn, tên miền nickdaoquan.vn sẽ dừng hoạt động vào ngày 15/01/2026.
           </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -136,7 +139,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold text-sm md:text-base shadow-lg shadow-pink-500/40 hover:from-pink-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300"
             >
-            BẤM VÀO ĐÂY ĐỂ LỰA NICK NGAY
+            TRUY CẬP NICKDAOQUAN.COM
             </a>
           </div>
         </section>
