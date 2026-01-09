@@ -131,7 +131,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://nickdaoquan.vn"
+              href="https://nickdaoquan.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold text-sm md:text-base shadow-lg shadow-pink-500/40 hover:from-pink-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300"
@@ -189,7 +189,7 @@ export default function Home() {
             </p>
             <p className="text-sm md:text-base text-gray-600 leading-relaxed">
               Nếu bạn đang tìm nơi mua nick Ngọc Rồng Online an toàn, giá hợp lý để chơi lâu dài, hãy
-              truy cập ngay <a href="https://nickdaoquan.vn" target="_blank" rel="noopener noreferrer" className="font-semibold text-pink-500">nickdaoquan.vn</a> để chọn
+              truy cập ngay <a href="https://nickdaoquan.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-pink-500">nickdaoquan.com</a> để chọn
               cho mình một tài khoản ưng ý nhé!
             </p>
           </div>
